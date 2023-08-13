@@ -126,15 +126,78 @@
 // person[2] = "22";
 // document.getElementById("demo").innerHTML = person[0] + " " + person.length;
 
-
 // WARNING !!
 // If you use named indexes, JavaScript will redefine the array to an object.
 // After that, some array methods and properties will produce incorrect results.
 
 // The Difference Between Arrays and Objects
-// In JavaScript, arrays use numbered indexes.  
+// In JavaScript, arrays use numbered indexes.
 // In JavaScript, objects use named indexes
 
 // Arrays are special kind of objects with numbered indexes
 
 // When to Use Arrays. When to use Objects.
+//Javascript does not support associative arrays
+//You should use objects when you want the element names to be string(string)
+//You should use array when you want the element names to be numbers
+
+//Javascript new Arrays()
+
+//Javascript has built in Array constructor new Array()
+// But you can safely use [] instead;
+// The two different statements both create a empty array named points
+
+// const points = new Array(40);
+// const points1 = [40];
+
+// const fruits = ["mango", "banana", "orange", "guava"];
+// let type = typeof fruits;
+// document.getElementById("demo").innerHTML = Array.isArray(fruits);
+// document.getElementById("demo").innerHTML = fruits instanceof Array;
+// ====================================***********==================================
+//Javascript Methods
+// 1=> Javascript Array at()
+// const fruits = ["mango", "banana", "orange", "guava"];
+// let index = 2;
+// let fruit = fruits.at(index);
+// let fruit = fruits.at(3);
+// let fruit = fruits.at(-1);
+// document.getElementById("demo").innerHTML = fruit;
+
+// 2=> Array concatenates
+//The concat() method concatenates (joins) two or more arrays.
+// The concat() method returns a new array, containing the joined arrays.
+// The concat() method does not change the existing arrays
+// const fruit1 = ["mango", "banana", "orange", "guava"];
+// const fruit2 = ["mango", "banana", "orange", "guava"];
+// const fruit3 = ["mango", "banana", "orange", "guava"];
+// let fruit = fruit1.concat(fruit2,fruit3)
+// document.getElementById("demo").innerHTML = fruit;
+
+// 3=> Javascript Array constructor
+// The constructor property returns the function that created the Array prototype:
+// const fruit = ["mango", "banana", "orange", "guava"];
+// let text = fruit.constructor;
+// document.getElementById("demo").innerHTML = text;
+
+// 4=> Javascript Array copyWithin()
+// The copyWithin() method copies array elements to another position in the array.
+// The copyWithin() method overwrites the existing values.
+// The copyWithin() method does not add items to the array.
+// Syntax
+// array.copyWithin(target, start, end)
+// const fruit = ["mango", "banana", "orange", "guava"];
+// let fruits = fruit.copyWithin(0, 1,  3);
+// document.getElementById("demo").innerHTML = fruits;
+
+// 5=> Javascript Array entries()
+// Create an Array Iterator, and then iterate over the key/value pairs:
+// The entries() method does not change the original array.
+// Syntax
+// array.entries()
+// const fruit = ["mango", "banana", "orange", "guava"];
+// let ent = fruit.entries(fruit);
+// for (let x of ent) {
+//   document.getElementById("demo").innerHTML += x + "<br>";
+// }
+// document.getElementById('demo').innerHTML = ent
