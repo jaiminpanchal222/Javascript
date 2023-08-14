@@ -201,3 +201,198 @@
 //   document.getElementById("demo").innerHTML += x + "<br>";
 // }
 // document.getElementById('demo').innerHTML = ent
+
+//6=>  Javascript Array every()
+// Description
+// The every() method executes a function for each array element.
+// The every() method returns true if the function returns true for all elements.
+// The every() method returns false if the function returns false for one element.
+// The every() method does not execute the function for empty elements.
+// The every() method does not change the original array
+// Syntax
+// array.every(function(currentValue, index, arr), thisValue)
+// const ages = [32, 35, 36, 38];
+// function checkAge(age) {
+//   return age > 31;
+// }
+// document.getElementById("demo").innerHTML = ages.every(checkAge);
+
+// const survey = [
+//   { name: "Steve", answer: "Yes" },
+//   { name: "Jessica", answer: "Yes" },
+//   { name: "Peter", answer: "Yes" },
+//   { name: "Elaine", answer: "Yes" },
+// ];
+
+// document.getElementById("demo").innerHTML = survey.every(isSameAns)
+
+// function isSameAns(el, index, arr) {
+//   if (index === 0) {
+//     return true;
+//   } else {
+//     return (el.answer === arr[index -1].answer);
+//   }
+// }
+
+// const ages = [32, 33, 12, 40];
+// function checkAge(age) {
+//   let addedage = document.getElementById("ageToCheck").value;
+//   console.log(addedage);
+//   return age > addedage;
+// }
+// function myFunction() {
+//   document.getElementById("demo").innerHTML = ages.every(checkAge);
+// }
+
+//7 => JavaScript Array fill()
+// Description
+// The fill() method fills specified elements in an array with a value.
+// The fill() method overwrites the original array.
+// Start and end position can be specified. If not, all elements will be filled.
+// Syntax
+// array.fill(value, start, end)
+// const ages = [32, 33, 12, 40];
+// document.getElementById('demo').innerHTML = ages.fill(22, 1,4)
+
+// 8=> Javascript Array Filter()
+// Description
+// The filter() method creates a new array filled with elements that pass a test provided by a function.
+// The filter() method does not execute the function for empty elements.
+// The filter() method does not change the original array.
+// Syntax
+// array.filter(function(currentValue, index, arr), thisValue)
+// const ages = [32, 33, 12, 40];
+// function checkAge(age) {
+//   let addedage = document.getElementById("ageToCheck").value;
+//   console.log(addedage);
+//   return age > addedage;
+// }
+// function myFunction() {
+//   document.getElementById("demo").innerHTML = ages.filter(checkAge);
+// }
+
+// 9=> JavaScript Array find()
+// The find() method returns the value of the first element that passes a test.
+// The find() method executes a function for each array element.
+// The find() method returns undefined if no elements are found.
+// The find() method does not execute the function for empty elements.
+// The find() method does not change the original array.
+// Syntax
+// array.find(function(currentValue, index, arr),thisValue)
+
+// const ages = [22, 26, 28, 19];
+// function checkAge(age) {
+//   let addedage = document.getElementById("ageToCheck").value;
+//   console.log(addedage);
+//   return age > addedage;
+// }
+// function myFunction() {
+//   document.getElementById("demo").innerHTML = ages.find(checkAge);
+// }
+
+// const array1 = [5,12,18,23,30]
+// const found = array1.find((e) => e > 25);
+// document.getElementById("demo").innerHTML = found;
+
+// 10=> JavaScript Array findIndex()
+// The findIndex() method executes a function for each array element.
+// The findIndex() method returns the index (position) of the first element that passes a test.
+// The findIndex() method returns -1 if no match is found.
+// The findIndex() method does not execute the function for empty array elements.
+// The findIndex() method does not change the original array.
+// Syntax
+// array.findIndex(function(currentValue, index, arr), thisValue)
+
+// const numbers = [4,9,13,17,22]
+// function checkValue(x){
+//   const valueofx = document.getElementById("toCheck").value;
+//   return x > valueofx;
+// }
+
+// function myFunction(){
+//   document.getElementById("demo").innerHTML = numbers.findIndex(checkValue)
+// }
+
+// 11=> JavaScript Array flat()
+// Description
+// The flat() method concatenates sub-array elements.
+// Syntax
+// array.flat(depth)
+// const myArr = [[1,2],[3,4],[5,6]];
+// const myArr = [1, 2, [3, [4, 5, 6], 7], 8];
+// const newArr = myArr.flat(2);
+// document.getElementById("demo").innerHTML = newArr;
+
+// 12=> JavaScript Array flatMap()
+// Description
+// The flatMap() method maps all array elements and creates a new flat array.
+// flatMap() creates a new array from calling a function for every array element.
+// flatMap() does not execute the function for empty elements.
+// flatMap() does not change the original array.
+// Syntax
+// array.flatMap(function(currentValue, index, arr), thisValue)
+// const myArr = [1, 2, 3, 4, 5, 6, 7, 8];
+// const newArr = myArr.flatMap((e) => e * 2);
+// document.getElementById("demo").innerHTML = newArr;
+
+// 13=> Javascript Array forEach()
+// let text = "";
+// const fruits = ["apple", "orange", "cherry"];
+// fruits.forEach(myFunction);
+// document.getElementById("demo").innerHTML = text;
+// function myFunction(item, index) {
+//   return (text += index + ":" + item + "<br>");
+// }
+// Description
+// The forEach() method calls a function for each element in an array.
+// The forEach() method is not executed for empty elements.
+
+// let sum = 0;
+// let sumitem = [1, 5, 10, 25, 50];
+// sumitem.forEach(myFunction);
+// document.getElementById("demo").innerHTML = sum;
+// function myFunction(item) {
+//   sum += item;
+// }
+
+// const array = [22, 26, 25, 96];
+// array.forEach(myFunction);
+// document.getElementById("demo").innerHTML = array;
+// function myFunction(item, index, arr) {
+//   arr[index] = item * 10;
+// }
+
+// 13=> JavaScript Array.from()
+// The Array.from() method returns an array from any object with a length property.
+// The Array.from() method returns an array from any iterable object.
+// Array.from()
+// Array.from() is a static property of the JavaScript Array object.
+// You can only use it as Array.from().
+// Using x.from(), where x is an array will return undefined.
+// let text = 'ABCDEFGHI'
+// const myarr = Array.from(text);
+// document.getElementById("demo").innerHTML = myarr;
+// console.log(typeof myarr)
+// Syntax
+// Array.from(object, mapFunction, thisValue)
+
+// 14=> Javascript Array Includes()
+// Description
+// The includes() method returns true if an array contains a specified value.
+// The includes() method returns false if the value is not found.
+// The includes() method is case sensitive.
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo").innerHTML = fruits.includes("Orange",2);
+// Syntax
+// array.includes(element, start)
+
+// 15=> Javascript Array indexOf()
+// The indexOf() method returns the first index (position) of a specified value.
+// The indexOf() method returns -1 if the value is not found.
+// The indexOf() method starts at a specified index and searches from left to right.
+// By default the search starts at the first element and ends at the last.
+// Negative start values counts from the last element (but still searches from left to right).
+// Syntax
+// array.indexOf(item, start)
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo").innerHTML = fruits.indexOf("Apple",0);
